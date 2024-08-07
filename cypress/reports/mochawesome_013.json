@@ -1,0 +1,148 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-08-07T17:53:15.280Z",
+    "end": "2024-08-07T17:53:21.088Z",
+    "duration": 5808,
+    "testsRegistered": 3,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 2,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "3f86a210-8990-48df-9a3c-8a00b7d23d3f",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Item_spec.cy.js",
+      "file": "cypress\\e2e\\Item_spec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a99041ec-9e65-4c2e-a55c-f27953a03191",
+          "title": "Item Page Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify UI elements on item page",
+              "fullTitle": "Item Page Tests Verify UI elements on item page",
+              "timedOut": null,
+              "duration": 5732,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "itemPage.verifyItemElements();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'https://www.saucedemo.com/inventory-item.html?id=5' to include '/inventory-item.html?id=4'\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Item Page Tests`",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'https://www.saucedemo.com/inventory-item.html?id=5' to include '/inventory-item.html?id=4'\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Item Page Tests`\n    at Context.eval (webpack:///./cypress/e2e/Item_spec.cy.js:18:13)",
+                "diff": null
+              },
+              "uuid": "78acee41-a80b-4089-b5b2-ceddc45658d0",
+              "parentUUID": "a99041ec-9e65-4c2e-a55c-f27953a03191",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify add to cart button changes to remove",
+              "fullTitle": "Item Page Tests Verify add to cart button changes to remove",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#add-to-cart').should('be.visible').and('have.text', 'Add to cart').as('addToCartButton');\ncy.get('@addToCartButton').click();\ncy.get('#remove', {\n  timeout: 10000\n}).should('be.visible').and('have.text', 'Remove');",
+              "err": {},
+              "uuid": "08bca5b4-d23e-46bd-b776-a9369b7c4d16",
+              "parentUUID": "a99041ec-9e65-4c2e-a55c-f27953a03191",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Verify remove button changes to add to cart",
+              "fullTitle": "Item Page Tests Verify remove button changes to add to cart",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#add-to-cart').should('be.visible').and('have.text', 'Add to cart').as('addToCartButton');\ncy.get('@addToCartButton').click();\ncy.get('#remove', {\n  timeout: 10000\n}).should('be.visible').and('have.text', 'Remove').as('removeButton');\ncy.get('@removeButton').click();\ncy.get('#add-to-cart', {\n  timeout: 10000\n}).should('be.visible').and('have.text', 'Add to cart');",
+              "err": {},
+              "uuid": "cd41044d-5aa7-4766-b592-a886ea641da9",
+              "parentUUID": "a99041ec-9e65-4c2e-a55c-f27953a03191",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "78acee41-a80b-4089-b5b2-ceddc45658d0"
+          ],
+          "pending": [],
+          "skipped": [
+            "08bca5b4-d23e-46bd-b776-a9369b7c4d16",
+            "cd41044d-5aa7-4766-b592-a886ea641da9"
+          ],
+          "duration": 5732,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

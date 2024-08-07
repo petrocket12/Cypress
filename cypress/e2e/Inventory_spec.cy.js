@@ -1,14 +1,14 @@
 import LoginPage from '../../Pages/loginPage';
 import InventoryPage from '../../Pages/inventoryPage';
-const credentials = require('../../fixtures/credentials.json');
+
 const loginPage = new LoginPage();
 const inventoryPage = new InventoryPage();
 
 describe('Inventory Page Tests', () => {
   beforeEach(() => {
     loginPage.visit();
-    loginPage.enterUsername(credentials.username);
-    loginPage.enterPassword(credentials.password);
+    loginPage.enterUsername(Cypress.env('USER_NAME'));
+    loginPage.enterPassword(Cypress.env('USER_PASSWORD'));
     loginPage.clickLogin();
     cy.url().should('include', '/inventory.html');
   });

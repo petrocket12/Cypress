@@ -1,0 +1,162 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-08-07T17:48:39.344Z",
+    "end": "2024-08-07T17:48:45.885Z",
+    "duration": 6541,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0df00c88-7ce5-4b64-b7c6-5f3f5bd13732",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Inventory_spec.cy.js",
+      "file": "cypress\\e2e\\Inventory_spec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e6cb997e-86ad-4027-8a64-fe94e6e188c6",
+          "title": "Inventory Page Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify UI elements on inventory page",
+              "fullTitle": "Inventory Page Tests Verify UI elements on inventory page",
+              "timedOut": null,
+              "duration": 3458,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "inventoryPage.verifyUiElements();",
+              "err": {},
+              "uuid": "4772ec76-651e-4324-994c-90f106a75814",
+              "parentUUID": "e6cb997e-86ad-4027-8a64-fe94e6e188c6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify sort options on inventory page",
+              "fullTitle": "Inventory Page Tests Verify sort options on inventory page",
+              "timedOut": null,
+              "duration": 1197,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "inventoryPage.verifySortOptions();",
+              "err": {},
+              "uuid": "330d0820-e886-40ce-9ab6-fd1ac729bcca",
+              "parentUUID": "e6cb997e-86ad-4027-8a64-fe94e6e188c6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify cart redirection",
+              "fullTitle": "Inventory Page Tests Verify cart redirection",
+              "timedOut": null,
+              "duration": 871,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "inventoryPage.clickCart();\ncy.url().should('include', '/cart.html');",
+              "err": {},
+              "uuid": "3de3866e-b61c-434d-860e-1e1f237cea40",
+              "parentUUID": "e6cb997e-86ad-4027-8a64-fe94e6e188c6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify item redirection",
+              "fullTitle": "Inventory Page Tests Verify item redirection",
+              "timedOut": null,
+              "duration": 860,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "inventoryPage.clickItem(4);\ncy.url().should('include', '/inventory-item.html?id=4');",
+              "err": {},
+              "uuid": "45da341e-a7a1-4830-a363-5792878874d2",
+              "parentUUID": "e6cb997e-86ad-4027-8a64-fe94e6e188c6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4772ec76-651e-4324-994c-90f106a75814",
+            "330d0820-e886-40ce-9ab6-fd1ac729bcca",
+            "3de3866e-b61c-434d-860e-1e1f237cea40",
+            "45da341e-a7a1-4830-a363-5792878874d2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6386,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
