@@ -1,0 +1,167 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-08-07T17:44:25.830Z",
+    "end": "2024-08-07T17:44:26.353Z",
+    "duration": 523,
+    "testsRegistered": 4,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 3,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "9ca15a6e-120a-4fa9-a9e0-49274f6441e4",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Inventory_spec.cy.js",
+      "file": "cypress\\e2e\\Inventory_spec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3ecb6388-c5e7-438e-846e-8309ec190d89",
+          "title": "Inventory Page Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify UI elements on inventory page",
+              "fullTitle": "Inventory Page Tests Verify UI elements on inventory page",
+              "timedOut": null,
+              "duration": 457,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "inventoryPage.verifyUiElements();",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\n/\n\nWe failed looking for this file at the path:\n\n/GitMPAs/Cypress/\n\nThe internal Cypress web server responded with:\n\n  > 404: Not Found\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Inventory Page Tests`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\n/\n\nWe failed looking for this file at the path:\n\n/GitMPAs/Cypress/\n\nThe internal Cypress web server responded with:\n\n  > 404: Not Found\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Inventory Page Tests`\n    at <unknown> (http://localhost:51576/__cypress/runner/cypress_runner.js:131900:76)\n    at visitFailedByErr (http://localhost:51576/__cypress/runner/cypress_runner.js:131315:12)\n    at <unknown> (http://localhost:51576/__cypress/runner/cypress_runner.js:131883:13)\n    at tryCatcher (http://localhost:51576/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (http://localhost:51576/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (http://localhost:51576/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (http://localhost:51576/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (http://localhost:51576/__cypress/runner/cypress_runner.js:1697:18)\n    at _drainQueueStep (http://localhost:51576/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (http://localhost:51576/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (http://localhost:51576/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (http://localhost:51576/__cypress/runner/cypress_runner.js:2286:14)\nFrom Your Spec Code:\n    at LoginPage.visit (webpack:///./Pages/loginPage.js:10:9)\n    at Context.eval (webpack:///./cypress/e2e/Inventory_spec.cy.js:9:14)",
+                "diff": null
+              },
+              "uuid": "3f81e0a4-7411-4520-b280-aca1e948d648",
+              "parentUUID": "3ecb6388-c5e7-438e-846e-8309ec190d89",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify sort options on inventory page",
+              "fullTitle": "Inventory Page Tests Verify sort options on inventory page",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "inventoryPage.verifySortOptions();",
+              "err": {},
+              "uuid": "9ac5dd31-9d45-4275-b8af-9dacc9b604f6",
+              "parentUUID": "3ecb6388-c5e7-438e-846e-8309ec190d89",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Verify cart redirection",
+              "fullTitle": "Inventory Page Tests Verify cart redirection",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "inventoryPage.clickCart();\ncy.url().should('include', '/cart.html');",
+              "err": {},
+              "uuid": "3800124a-3441-47ff-b1e7-c85291530f75",
+              "parentUUID": "3ecb6388-c5e7-438e-846e-8309ec190d89",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Verify item redirection",
+              "fullTitle": "Inventory Page Tests Verify item redirection",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "inventoryPage.clickItem(4);\ncy.url().should('include', '/inventory-item.html?id=4');",
+              "err": {},
+              "uuid": "8344a430-a2c8-4449-903d-d0791d104b17",
+              "parentUUID": "3ecb6388-c5e7-438e-846e-8309ec190d89",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "3f81e0a4-7411-4520-b280-aca1e948d648"
+          ],
+          "pending": [],
+          "skipped": [
+            "9ac5dd31-9d45-4275-b8af-9dacc9b604f6",
+            "3800124a-3441-47ff-b1e7-c85291530f75",
+            "8344a430-a2c8-4449-903d-d0791d104b17"
+          ],
+          "duration": 457,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

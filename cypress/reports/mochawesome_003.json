@@ -1,0 +1,181 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-08-07T17:43:36.004Z",
+    "end": "2024-08-07T17:43:44.145Z",
+    "duration": 8141,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6e4c767a-c8c3-4d8e-9958-a51dffeb24ed",
+      "title": "",
+      "fullFile": "cypress\\e2e\\loginspec.cy.js",
+      "file": "cypress\\e2e\\loginspec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c65f4907-2553-47bc-ac09-44ef0245de86",
+          "title": "Login Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Successful login",
+              "fullTitle": "Login Tests Successful login",
+              "timedOut": null,
+              "duration": 2976,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#user-name').type('standard_user');\ncy.get('#password').type('secret_sauce');\ncy.get('#login-button').click();\ncy.url().should('eq', `${baseUrl}/inventory.html`);",
+              "err": {},
+              "uuid": "641be310-ee44-4401-b336-f8a91a95a192",
+              "parentUUID": "c65f4907-2553-47bc-ac09-44ef0245de86",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Unsuccessful login with wrong password",
+              "fullTitle": "Login Tests Unsuccessful login with wrong password",
+              "timedOut": null,
+              "duration": 1183,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#user-name').type('standard_user');\ncy.get('#password').type('wrong_password');\ncy.get('#login-button').click();\ncy.get('.error-message-container').should('contain', 'Epic sadface: Username and password do not match any user in this service');",
+              "err": {},
+              "uuid": "cb487b34-1573-46ca-b15d-5985892ff3d4",
+              "parentUUID": "c65f4907-2553-47bc-ac09-44ef0245de86",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Unsuccessful login with wrong username",
+              "fullTitle": "Login Tests Unsuccessful login with wrong username",
+              "timedOut": null,
+              "duration": 738,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#user-name').type('wrong_user');\ncy.get('#password').type('secret_sauce');\ncy.get('#login-button').click();\ncy.get('.error-message-container').should('contain', 'Epic sadface: Username and password do not match any user in this service');",
+              "err": {},
+              "uuid": "37632158-8bec-46a3-8656-e6abcf911865",
+              "parentUUID": "c65f4907-2553-47bc-ac09-44ef0245de86",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Unsuccessful login with missing password",
+              "fullTitle": "Login Tests Unsuccessful login with missing password",
+              "timedOut": null,
+              "duration": 479,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#user-name').type('standard_user');\ncy.get('#login-button').click();\ncy.get('.error-message-container').should('contain', 'Epic sadface: Password is required');",
+              "err": {},
+              "uuid": "891b9394-048b-4a85-ab98-b3fd722505a8",
+              "parentUUID": "c65f4907-2553-47bc-ac09-44ef0245de86",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Unsuccessful login with missing username",
+              "fullTitle": "Login Tests Unsuccessful login with missing username",
+              "timedOut": null,
+              "duration": 477,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#password').type('secret_sauce');\ncy.get('#login-button').click();\ncy.get('.error-message-container').should('contain', 'Epic sadface: Username is required');",
+              "err": {},
+              "uuid": "b574ccbc-e882-4de8-8b4f-c28f492fccba",
+              "parentUUID": "c65f4907-2553-47bc-ac09-44ef0245de86",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "641be310-ee44-4401-b336-f8a91a95a192",
+            "cb487b34-1573-46ca-b15d-5985892ff3d4",
+            "37632158-8bec-46a3-8656-e6abcf911865",
+            "891b9394-048b-4a85-ab98-b3fd722505a8",
+            "b574ccbc-e882-4de8-8b4f-c28f492fccba"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5853,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
